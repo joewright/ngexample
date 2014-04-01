@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: BaseCtrl', function () {
 
   // load the controller's module
   beforeEach(module('testerooskieApp'));
 
-  var MainCtrl,
+  var BaseCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    BaseCtrl = $controller('BaseCtrl', {
       $scope: scope
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.title).toBe('Main');
+    expect(typeof scope.toggleMenu).toBe('function');
   });
 });
